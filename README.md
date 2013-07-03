@@ -14,4 +14,4 @@
 
 ## Step 3. Install Everything
 
-1. From Terminal: curl -sL goo.gl/gfdqL | bash
+1. From Terminal: curl -sL https://raw.github.com/ksylvest/setup/master/setup.sh | bash
