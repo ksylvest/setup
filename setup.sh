@@ -22,9 +22,10 @@ then
   then
     echo "Configuring: ~./config/fish/config.fish"
     sh -c "cat > ~/.config/fish/config.fish <<EOS
-set PATH /usr/local/share/npm/bin /usr/local/bin /usr/bin /bin /usr/local/share/npm/sbin /usr/local/sbin /usr/sbin /sbin
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
+set fish_greeting ""
+set PATH /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
+set PATH /Users/kevin/.rbenv/bin $PATH
+set PATH /Users/kevin/.rbenv/shims $PATH
 rbenv rehash
 EOS
 "
