@@ -118,14 +118,6 @@ else
   echo "Found: convert"
 fi
 
-if [ ! -f /usr/local/bin/qmake ]
-then
-  echo "Installing: qt"
-  brew install qt
-else
-  echo "Found: qt"
-fi
-
 if [ ! -f /usr/local/bin/elasticsearch ]
 then
   echo "Installing: elasticsearch"
