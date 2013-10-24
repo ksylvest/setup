@@ -118,6 +118,18 @@ else
   echo "Found: convert"
 fi
 
+if [ ! -e /usr/local/bin/postgres ]
+then
+  echo "Installing: postgres"
+  brew install  --no-tcl postgresql
+  initdb /usr/local/var/postgres -E utf8
+  mkdir -p ~/Library/LaunchAgents
+  cp `brew --prefix postgres`/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+  launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+else
+  echo "Found: postgres"
+fi
+
 if [ ! -f /usr/local/bin/elasticsearch ]
 then
   echo "Installing: elasticsearch"
@@ -127,18 +139,6 @@ then
   launchctl load -wF ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
 else
   echo "Found: elasticsearch"
-fi
-
-if [ ! -e /usr/local/bin/postgres ]
-then
-  echo "Installing: postgres"
-  brew install postgresql
-  initdb /usr/local/var/postgres -E utf8
-  mkdir -p ~/Library/LaunchAgents
-  cp `brew --prefix postgres`/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
-  launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-else
-  echo "Found: postgres"
 fi
 
 if [ ! -e /usr/local/bin/memcached ]
