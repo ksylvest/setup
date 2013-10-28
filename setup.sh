@@ -121,7 +121,7 @@ fi
 if [ ! -e /usr/local/bin/postgres ]
 then
   echo "Installing: postgres"
-  brew install  --no-tcl postgresql
+  brew install postgresql
   initdb /usr/local/var/postgres -E utf8
   mkdir -p ~/Library/LaunchAgents
   cp `brew --prefix postgres`/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
