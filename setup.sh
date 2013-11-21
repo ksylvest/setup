@@ -62,6 +62,14 @@ else
   echo "Found: brew"
 fi
 
+if [ ! -f /usr/local/bin/qt ]
+then
+  echo "Installing: qt"
+  brew install qt --HEAD
+else
+  echo "Found: qt"
+fi
+
 if [ ! -f /usr/local/bin/zsh ]
 then
   echo "Installing: zsh"
