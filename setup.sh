@@ -62,7 +62,7 @@ else
   echo "Found: brew"
 fi
 
-if [ ! -f /usr/local/bin/qt ]
+if [ ! -f /usr/local/bin/qmake ]
 then
   echo "Installing: qt"
   brew install qt --HEAD
