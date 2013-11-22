@@ -57,7 +57,7 @@ fi
 if [ ! -f /usr/local/bin/brew ]
 then
   echo "Installing: brew"
-  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 else
   echo "Found: brew"
 fi
