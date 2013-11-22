@@ -273,3 +273,8 @@ fi
 
 echo "Configuring: git"
 git config --global credential.helper osxkeychain
+
+# Step 8. Install some gems...
+
+gem install bundler
+gem install powder
