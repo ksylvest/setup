@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=2.1.0
+VERSION=2.1.1
 
 # Step 1. Initialize Profiles
 
