@@ -15,3 +15,7 @@
 ## Step 3. Install Everything
 
 1. From Terminal: curl -sL https://raw.github.com/ksylvest/setup/master/setup.sh | bash
+
+## Copyright
+
+Copyright (c) 2010 - 2014 Kevin Sylvestre. See LICENSE for details.
