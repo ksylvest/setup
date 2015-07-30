@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=2.1.5
+VERSION=2.2.2
 
 # Step 1. Initialize Profiles
 
@@ -22,10 +22,8 @@ then
   then
     echo "Configuring: ~./config/fish/config.fish"
     sh -c "cat > ~/.config/fish/config.fish <<EOS
-set fish_greeting ""
-set PATH /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
-set PATH /Users/kevin/.rbenv/bin $PATH
-set PATH /Users/kevin/.rbenv/shims $PATH
+set EDITOR mate
+set PATH ./bin ~/.rbenv/shims ~/.rbenv/bin /usr/local/share/npm/bin /usr/local/bin /usr/bin /bin /usr/local/share/npm/sbin /usr/local/sbin /usr/sbin /sbin
 rbenv rehash
 EOS
 "
